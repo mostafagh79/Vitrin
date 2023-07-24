@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <title>Vitrin</title>
+  </head>
+  <body class="rtl-direction font-vazir bg-gray-200 overflow-y-visible overflow-x-hidden">
+    
+    <header id="main-header" class="flex flex-col fixed z-10 w-full">
+      <div
+      id="blue_nav"
+      class="hidden md:flex md:flex-col md:pt-2 md:pr-12 md:bg-blue-800 md:w-screen md:h-16 transition-all duration-500"
+    >
+      <img
+        class="h-8 w-8 rounded-full mr-4"
+        src="./images/sorush-plus/souroush+.svg"
+        alt="soroushPlusLogo"
+      />
+      <p class="text-white text-sm">سروش پلاس</p>
+    </div>
+      <a
+        id="ads"
+        href="#"
+        class="bg-gray-100 md:hidden w-screen h-16 flex justify-between flex-row items-center px-4 py-3"
+      >
+        <div class="flex flex-row items-center">
+          <img
+            class="h-4 w-4 px-1 ml-2"
+            src="./images/sorush-plus/x-symbol.svg"
+            alt="x-symbol"
+            id="x-symbol"
+          />
+          <img
+            class="h-10 w-10 rounded-2xl ml-2"
+            src="./images/sorush-plus/soroushPlusLogo.svg"
+            alt="soroushPlusLogo"
+          />
+          <div class="flex flex-col pr-2 text-sm">
+            <p>اپلیکیشن سروش پلاس</p>
+            <p>دریافت رایگان برنامه</p>
+          </div>
+        </div>
+        <span class="text-blue-900">دانلود</span>
+      </a>
+      <form id="search-form"
+        class="self-center mt-2 flex items-center justify-between bg-white border-2 border-solid w-11/12 max-w-lg md:hidden rounded-xl"
+      >
+        <input
+          class="rounded-md flex-1 p-2 w-full right-0 outline-none"
+          type="search"
+          placeholder="جست و جو در ویترین"
+        />
+        <button class="w-7 h-7 left-3 ml-2">
+          <img src="./images/sorush-plus/search-icon.svg" alt="Search Icon" />
+        </button>
+      </form>
+
+      <nav id="navbar"
+        class="hidden md:bg-white md:flex justify-center items-center md:w-screen md:h-[60px] transition-all duration-500"
+      >
+        <div
+          class="w-full mx-auto flex justify-between items-center max-w-[575px] sm:max-w-[800px]"
+        >
+        
+          <ul class="text-sm font-bold flex gap-6 w-full justify-center">
+            <li>
+              <a href="#">صفحه نخست</a>
+            </li>
+            <li>
+              <a href="#">بلاگ</a>
+            </li>
+            <li>
+              <a href="#">دریافت برنامه</a>
+            </li>
+          </ul>
+
+          <div class="flex items-center justify-center w-full">
+            <form method="POST">
+              <div class="relative text-gray-600 focus-within:text-gray-400">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+                  <button
+                    type="submit"
+                    class="p-1 hover:text-white transition-all delay-75 focus:outline-blue-800 focus:shadow-outline"
+                  >
+                    <svg
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      ></path>
+                    </svg>
+                  </button>
+                </span>
+                <input
+                  type="search"
+                  name="q"
+                  class="border-[1px] border-gray-400 py-2  text-sm text-white pr-3 rounded-3xl pl-10 focus:outline-none focus:bg-white focus:text-gray-900"
+                  placeholder="جست و جو در ویترین"
+                  autocomplete="off"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="flex justify-center w-full">
+      <main
+        id="main"
+        class="w-full my-4 mt-32 sm:mt-[130px] md:w-[552px] lg:w-[800px] bg-white flex justify-center flex-col items-center rounded-3xl overflow-visible md:overflow-hidden"
+      >
+
+        <!-- It's a wrapper to avoid middle content to grow extensively -->
+          <div class="slider--container">
+            <div class="slider--wrapper">
+              <a class="slider--item">
+                <div class="slider--counter">۳ / ۱</div>
+                <img src="./images/banners/Kash-Karbala.jpg" alt="A banner" class="slide--image"
+                draggable="false">
+              </a>
+              <a class="slider--item">
+                <div class="slider--counter">۳ / ۲</div>
+                <img src="./images/banners/Ya-Hossein.jpg" alt="A banner" class="slide--image" draggable="false">
+              </a>
+              <a class="slider--item">
+                <div class="slider--counter">۳ / ۳</div>
+                <img src="./images/banners/radio.jpg" alt="A banner" class="slide--image" draggable="false">
+              </a>
+              <a id="prev" class="prev">&#10094;</a>
+              <a id="next" class="next">&#10095;</a>
+            </div>
+          </div>
+
+          <div class="max-w-[575px] sm:max-w-full w-full space-y-4 px-3">
+
+          <!-- Relegious Slider and banner -->
+          <section id="relegious" class="slider">
+            <div class="slider--title">
+              <h6>مذهبی</h6>
+              <a href="" class="show-all">نمایش همه</a>
+            </div>
+
+            <!-- Main content of the slider which includes some cards which are linkes -->
+            <div class="offer--content">
+            </div>
+          </section>
+
+          <div class="banner">
+            <img
+              src="./images/banners/ezn-aza.png"
+              alt="Aza va taviz parcham"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- Best Slider without banner -->
+          <section id="best" class="slider">
+            <div class="slider--title">
+              <h6>برترین ها</h6>
+            </div>
+
+            <div class="offer--content">
+            </div>
+          </section>
+
+          <!-- 8 Categories -->
+          <section id="categories" class="categories"></section>
+
+          <section id="top-selers" class="slider">
+            <div class="slider--title">
+              <h6>پر فروش هفته</h6>
+              <a href="" class="show-all">نمایش همه</a>
+            </div>
+
+            <div class="offer--content"></div>
+          </section>
+
+          <div class="banner">
+            <img
+              src="./images/banners/ezn-aza.png"
+              alt="Aza va taviz parcham"
+              loading="lazy"
+            />
+          </div>
+
+          <section id="life-style" class="slider">
+            <div class="slider--title">
+              <h6>سبک زندگی</h6>
+              <a href="" class="show-all">نمایش همه</a>
+            </div>
+            <div class="offer--content"></div>
+          </section>
+          <div class="banner">
+            <img
+              src="./images/banners/ezn-aza.png"
+              alt="Aza va taviz parcham"
+              loading="lazy"
+            />
+          </div>
+
+          <section id="news" class="slider">
+            <div class="slider--title">
+              <h6>اخبار</h6>
+              <a href="" class="show-all">نمایش همه</a>
+            </div>
+            <div class="offer--content"></div>
+          </section>
+          <div class="banner">
+            <img
+              src="./images/banners/ezn-aza.png"
+              alt="Aza va taviz parcham"
+              loading="lazy"
+            />
+          </div>
+
+          <section id="ads" class="slider">
+            <div class="slider--title">
+              <h6>تبلیغ گسترده</h6>
+              <a href="" class="show-all">نمایش همه</a>
+            </div>
+            <div class="offer--content"></div>
+          </section>
+          <div class="banner">
+            <img
+              src="./images/banners/ezn-aza.png"
+              alt="Aza va taviz parcham"
+              loading="lazy"
+            />
+          </div>
+
+          <section id="soroush-plus" class="slider">
+            <div class="slider--title">
+              <h6>سروش پلاس</h6>
+              <a href="" class="show-all">نمایش همه</a>
+            </div>
+            <div class="offer--content"></div>
+          </section>
+        </div>
+      </div>
+      </main>
+    </div>
+    <footer class="flex flex-col sm:flex-row bg-gray-100 w-screen h-32 justify-center items-center">
+      <div class="flex gap-3 mb-3 sm:mb-0">
+          <a href="" class="footer--icon">
+            <img src="./images/sorush-plus/twitter.svg" alt="twitter icon" />
+          </a>
+
+          <a href="" class="footer--icon">
+            <img src="./images/sorush-plus/envelope.svg" alt="email icon" />
+          </a>
+
+          <a href="" class="footer--icon">
+            <img src="./images/sorush-plus/globe2.svg" alt="world wide web icon" />
+          </a>
+
+          <a href="" class="footer--icon">
+            <img src="./images/sorush-plus/instagram.svg" alt="instagram icon" />
+          </a>
+
+      </div>
+
+      <p class="text-xs pr-2">
+        تمامی حقوق مادی و معنوی این صفحه متعلق به پیام رسان سروش پلاس می‌باشد.
+      </p>
+
+    </footer>
+    <script src="./js/createCategory.js" type="module"></script>
+    <script src="./js/offerCreator.js" type="module"></script>
+    <script src="./js/slideShow.js" type="module"></script>
+    <script src="./js/offerSlider.js" type="module"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

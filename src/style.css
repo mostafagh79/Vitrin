@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "vazir";
+  src: url("../public/fonts/Vazir.ttf");
+}
+
+@layer components {
+  .rtl-direction {
+    direction: rtl;
+  }
+
+  .slider--container {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .slider--wrapper {
+    @apply flex snap-x snap-mandatory relative;
+    touch-action: pan-y;
+  }
+
+  .slider--item {
+    @apply snap-center min-w-full h-auto flex justify-center items-center relative;
+  }
+
+  .slider--counter {
+    @apply text-white p-1 sm:px-2 sm:py-1 text-xs absolute bottom-3 left-3 sm:bottom-5 sm:left-5 text-center bg-gray-700 w-fit rounded-3xl sm:text-sm;
+  }
+
+  .prev,
+  .next {
+    @apply top-1/2 cursor-pointer absolute w-auto -mt-5 p-3 text-white text-xs sm:text-base;
+    transition: 0.6s ease;
+    border-radius: 8px 0 0 8px;
+    user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    left: 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .slider {
+    @apply overflow-x-auto overflow-y-hidden my-4;
+  }
+
+  .slider--title {
+    @apply flex justify-between my-2 text-xl px-2;
+  }
+
+  .show-all {
+    @apply text-blue-700;
+  }
+
+  .banner {
+    @apply my-2;
+  }
+
+  .offer--content {
+    @apply flex overflow-x-auto w-full gap-6;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .offer--content::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card {
+    @apply overflow-hidden;
+    flex: 0 0 auto;
+  }
+
+  .card--title {
+    @apply flex justify-between my-2 text-sm sm:text-base px-2;
+  }
+
+  .card--image {
+    @apply rounded-3xl w-[75px] h-[75px] sm:w-[90px] sm:h-[90px] mb-2 object-cover;
+  }
+
+  .categories {
+    @apply flex flex-wrap gap-2 justify-center items-start;
+  }
+
+  .category {
+    @apply w-[22%] flex flex-col items-center;
+  }
+
+  .offer--content {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0;
+    cursor: pointer;
+    user-select: none;
+    padding-right: 5px;
+  }
+
+  .offer--content .card {
+    @apply inline-block w-fit h-fit my-2;
+    user-select: none;
+    transition: transform 300ms;
+  }
+
+  .offer--content.active .card {
+    @apply scale-105;
+  }
+
+  .fadeIn {
+    opacity: 1;
+    transition: all;
+    transition-duration: 100ms;
+    bottom: 0;
+  }
+
+  .footer--icon {
+    @apply h-8 w-8;
+  }
+
+  .footer--icon img {
+    @apply w-full h-full text-gray-600;
+  }
+}

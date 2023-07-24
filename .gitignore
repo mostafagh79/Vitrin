@@ -1,0 +1,14 @@
+# Ignore Node.js related files
+node_modules/
+
+# Ignore development and build files
+dist/
+build/
+*.log
+
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore IntelliJ IDEA settings
+.idea/
+
