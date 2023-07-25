@@ -6,7 +6,7 @@
 
 ```bash
 git clone https://github.com/mostafagh79/Ranger-Game.git
-cd Ranger-Game
+cd Vitrin
 ```
 
 ```bash
