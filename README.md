@@ -1,6 +1,6 @@
 # Vitrin
 
- An implementation of (Vitrin)[https://vitrin.splus.ir/]
+ An implementation of (https://vitrin.splus.ir/)[Vitrin]
 
 ## How To Run ?
 
