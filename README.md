@@ -5,7 +5,7 @@
 ## How To Run ?
 
 ```bash
-git clone https://github.com/mostafagh79/Ranger-Game.git
+git clone https://github.com/mostafagh79/Vitrin.git
 cd Vitrin
 ```
 
